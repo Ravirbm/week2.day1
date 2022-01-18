@@ -1,5 +1,6 @@
 package week2.day1;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -41,12 +42,7 @@ public class CreateContact {
 		driver.findElement(By.linkText("Create Contact")).click();
 		
 		//Enter the first Name
-		//driver.findElement(By.id("firstNameField")).sendKeys("R");
-		
-		//print the First name
-		WebElement firstName = driver.findElement(By.id("firstNameField"));
-		firstName.sendKeys("R");
-		System.out.println(firstName);
+		driver.findElement(By.id("firstNameField")).sendKeys("R");
 		
 		//Enter the last Name
 		driver.findElement(By.id("lastNameField")).sendKeys("Ravishankar");
