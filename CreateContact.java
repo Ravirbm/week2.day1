@@ -42,7 +42,11 @@ public class CreateContact {
 		driver.findElement(By.linkText("Create Contact")).click();
 		
 		//Enter the first Name
-		driver.findElement(By.id("firstNameField")).sendKeys("R");
+		WebElement firstName = driver.findElement(By.id("firstNameField"));
+		firstName.sendKeys("R");
+		String attribute = firstName.getAttribute("value");
+		System.out.println(attribute);
+		
 		
 		//Enter the last Name
 		driver.findElement(By.id("lastNameField")).sendKeys("Ravishankar");
